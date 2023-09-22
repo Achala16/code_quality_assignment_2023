@@ -14,33 +14,34 @@ import java.util.Map;
 
 
 public class TravelCostCalculator {
+    //storing all inputs in a map
     static Map<String, Double> a = new HashMap<>();
     static Map<String, Double> b = new HashMap<>();
     static Map<String, Double> c = new HashMap<>();
 
     static void l1(String file) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(file));
-        String i; 
-        while ((i = reader.readLine()) != null) {
-            String[] p = i.split(",");
+        String input; 
+        while ((input = reader.readLine()) != null) {
+            String[] p = input.split(",");
             a.put(p[0].toUpperCase(), Double.parseDouble(p[1]));
         }
     }
 
     static void l2(String file) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(file));
-        String i;
-        while ((i = reader.readLine()) != null) {
-            String[] p = i.split(",");
+        String input;
+        while ((input = reader.readLine()) != null) {
+            String[] p = input.split(",");
             b.put(p[0].toUpperCase(), Double.parseDouble(p[1]));
         }
     }
 
     static void l3(String file) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(file));
-        String i;
-        while ((i = reader.readLine()) != null) {
-            String[] p = i.split(",");
+        String input;
+        while ((input = reader.readLine()) != null) {
+            String[] p = input.split(",");
             c.put(p[0].toUpperCase(), Double.parseDouble(p[1]));
         }
     }
@@ -69,7 +70,7 @@ public class TravelCostCalculator {
             int stayDuration;//variable to store duration that we stay in a place
 
             stayDuration = Integer.parseInt(reader.readLine());
-            hotelCost *= stayDuration;
+            hotelCost *= stayDuration;//multiply hotel cost and stay duration together
 
             double totalCostInUsd;//variable to store total cost in usd
 
